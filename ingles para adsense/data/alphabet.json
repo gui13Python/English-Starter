@@ -1,0 +1,127 @@
+{
+  "basic": [
+    {"en": "Hello", "pt": "Olá"},
+    {"en": "Hi", "pt": "Oi"},
+    {"en": "Good morning", "pt": "Bom dia"},
+    {"en": "Good afternoon", "pt": "Boa tarde"},
+    {"en": "Good evening", "pt": "Boa noite"},
+    {"en": "Good night", "pt": "Boa noite"},
+    {"en": "Bye", "pt": "Tchau"},
+    {"en": "Goodbye", "pt": "Adeus"},
+    {"en": "See you later", "pt": "Até mais"},
+    {"en": "See you soon", "pt": "Até logo"},
+    {"en": "Take care", "pt": "Se cuida"},
+    {"en": "Have a nice day", "pt": "Tenha um bom dia"}
+  ],
+  "greetings_responses": [
+    {"en": "I'm fine, thanks!", "pt": "Estou bem, obrigado!"},
+    {"en": "I'm good, and you?", "pt": "Estou bem, e você?"},
+    {"en": "Not bad", "pt": "Nada mal"},
+    {"en": "So-so", "pt": "Mais ou menos"},
+    {"en": "I'm great!", "pt": "Estou ótimo!"},
+    {"en": "I'm tired", "pt": "Estou cansado"},
+    {"en": "I'm happy", "pt": "Estou feliz"}
+  ],
+  "questions": [
+    {"en": "How are you?", "pt": "Como você está?"},
+    {"en": "What's up?", "pt": "E aí?"},
+    {"en": "How's it going?", "pt": "Como vão as coisas?"},
+    {"en": "What's your name?", "pt": "Qual é o seu nome?"},
+    {"en": "Where are you from?", "pt": "De onde você é?"},
+    {"en": "How old are you?", "pt": "Quantos anos você tem?"},
+    {"en": "What do you do?", "pt": "O que você faz?"},
+    {"en": "Do you speak English?", "pt": "Você fala inglês?"},
+    {"en": "Where do you live?", "pt": "Onde você mora?"},
+    {"en": "What time is it?", "pt": "Que horas são?"},
+    {"en": "Are you okay?", "pt": "Você está bem?"}
+  ],
+  "thank_you": [
+    {"en": "Thank you", "pt": "Obrigado"},
+    {"en": "Thanks", "pt": "Valeu"},
+    {"en": "Thank you very much", "pt": "Muito obrigado"},
+    {"en": "Thanks a lot", "pt": "Muito obrigado / Valeu demais"},
+    {"en": "You're welcome", "pt": "De nada"},
+    {"en": "No problem", "pt": "Sem problema"},
+    {"en": "Don't mention it", "pt": "Não há de quê"}
+  ],
+  "sorry": [
+    {"en": "Sorry", "pt": "Desculpa / Desculpe"},
+    {"en": "I'm sorry", "pt": "Me desculpe"},
+    {"en": "Sorry about that", "pt": "Desculpa por isso"},
+    {"en": "My bad", "pt": "Foi mal"},
+    {"en": "Excuse me", "pt": "Com licença / Desculpe-me"},
+    {"en": "I apologize", "pt": "Peço desculpas"}
+  ],
+  "yes_no": [
+    {"en": "Yes", "pt": "Sim"},
+    {"en": "Yeah", "pt": "É / Sim"},
+    {"en": "Yep", "pt": "Sim / É isso aí"},
+    {"en": "No", "pt": "Não"},
+    {"en": "Nope", "pt": "Não"},
+    {"en": "Maybe", "pt": "Talvez"},
+    {"en": "Of course", "pt": "Claro / Com certeza"},
+    {"en": "Sure", "pt": "Claro / Tá bom"}
+  ],
+  "please": [
+    {"en": "Please", "pt": "Por favor"},
+    {"en": "Could you…?", "pt": "Você poderia…?"},
+    {"en": "Can you help me?", "pt": "Você pode me ajudar?"},
+    {"en": "Would you mind…?", "pt": "Você se importaria…?"}
+  ],
+  "food_drink": [
+    {"en": "I'm hungry", "pt": "Estou com fome"},
+    {"en": "I'm thirsty", "pt": "Estou com sede"},
+    {"en": "Water", "pt": "Água"},
+    {"en": "Coffee", "pt": "Café"},
+    {"en": "Beer", "pt": "Cerveja"},
+    {"en": "Juice", "pt": "Suco"},
+    {"en": "The bill, please", "pt": "A conta, por favor"},
+    {"en": "It was delicious", "pt": "Estava delicioso"},
+    {"en": "I'm full", "pt": "Estou satisfeito / Cheio"}
+  ],
+  "common_phrases": [
+    {"en": "No way!", "pt": "Não acredito! / De jeito nenhum!"},
+    {"en": "Really?", "pt": "Sério?"},
+    {"en": "Are you serious?", "pt": "Você tá falando sério?"},
+    {"en": "That's cool", "pt": "Que legal"},
+    {"en": "Nice!", "pt": "Legal! / Show!"},
+    {"en": "Awesome", "pt": "Demais / Incrível"},
+    {"en": "What a pity", "pt": "Que pena"},
+    {"en": "Good luck!", "pt": "Boa sorte!"},
+    {"en": "Congratulations!", "pt": "Parabéns!"},
+    {"en": "Cheers!", "pt": "Saúde!"},
+    {"en": "Help!", "pt": "Socorro!"},
+    {"en": "Calm down", "pt": "Calma"},
+    {"en": "Relax", "pt": "Relaxa"},
+    {"en": "Be careful", "pt": "Cuidado"}
+  ],
+  "travel": [
+    {"en": "Where is the bathroom?", "pt": "Onde fica o banheiro?"},
+    {"en": "I need a doctor", "pt": "Preciso de um médico"},
+    {"en": "How much is it?", "pt": "Quanto custa?"},
+    {"en": "Left / Right", "pt": "Esquerda / Direita"},
+    {"en": "Straight ahead", "pt": "Em frente"},
+    {"en": "I'm lost", "pt": "Estou perdido"},
+    {"en": "Do you have Wi-Fi?", "pt": "Vocês têm Wi-Fi?"},
+    {"en": "I don't understand", "pt": "Não entendi"}
+  ],
+  "feelings": [
+    {"en": "I'm happy", "pt": "Estou feliz"},
+    {"en": "I'm sad", "pt": "Estou triste"},
+    {"en": "I'm angry", "pt": "Estou bravo / com raiva"},
+    {"en": "I'm excited", "pt": "Estou animado"},
+    {"en": "I'm bored", "pt": "Estou entediado"},
+    {"en": "I'm scared", "pt": "Estou com medo"},
+    {"en": "I'm surprised", "pt": "Estou surpreso"}
+  ],
+  "time_weather": [
+    {"en": "It's hot", "pt": "Está quente"},
+    {"en": "It's cold", "pt": "Está frio"},
+    {"en": "It's raining", "pt": "Está chovendo"},
+    {"en": "The weather is nice", "pt": "O tempo está bom"},
+    {"en": "What time is it?", "pt": "Que horas são?"},
+    {"en": "Today", "pt": "Hoje"},
+    {"en": "Tomorrow", "pt": "Amanhã"},
+    {"en": "Yesterday", "pt": "Ontem"}
+  ]
+}
