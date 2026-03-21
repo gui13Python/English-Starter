@@ -1,0 +1,245 @@
+{
+  "lastModified": "2026-03-21T09:40:00Z",
+  "exercises": [
+    {
+      "id": 1,
+      "type": "vocabulary",
+      "question": "Como se diz 'Bom dia' em inglês?",
+      "options": ["Good night", "Good morning", "Good afternoon", "Goodbye"],
+      "correct": 1,
+      "explanation": "'Good morning' é a tradução correta de 'Bom dia'."
+    },
+    {
+      "id": 2,
+      "type": "vocabulary",
+      "question": "Qual é a tradução de 'water'?",
+      "options": ["Fogo", "Terra", "Água", "Ar"],
+      "correct": 2,
+      "explanation": "'Water' significa 'água' em português."
+    },
+    {
+      "id": 3,
+      "type": "grammar",
+      "question": "Complete: I ___ a student.",
+      "options": ["am", "is", "are", "be"],
+      "correct": 0,
+      "explanation": "Com o pronome 'I' usamos 'am': I am a student."
+    },
+    {
+      "id": 4,
+      "type": "translation",
+      "question": "Como se diz 'Olá' em inglês?",
+      "options": ["Hi", "Bye", "Please", "Thanks"],
+      "correct": 0,
+      "explanation": "'Hi' ou 'Hello' são formas comuns de dizer 'Olá'."
+    },
+    {
+      "id": 5,
+      "type": "vocabulary",
+      "question": "Qual a cor 'red' em português?",
+      "options": ["Azul", "Vermelho", "Verde", "Amarelo"],
+      "correct": 1,
+      "explanation": "'Red' = vermelho."
+    },
+    {
+      "id": 6,
+      "type": "grammar",
+      "question": "He ___ my brother.",
+      "options": ["am", "is", "are", "be"],
+      "correct": 1,
+      "explanation": "Com he/she/it usamos 'is': He is my brother."
+    },
+    {
+      "id": 7,
+      "type": "vocabulary",
+      "question": "Como se diz 'mãe' em inglês?",
+      "options": ["Father", "Mother", "Sister", "Brother"],
+      "correct": 1,
+      "explanation": "'Mother' = mãe."
+    },
+    {
+      "id": 8,
+      "type": "numbers",
+      "question": "Qual é o número 'five'?",
+      "options": ["4", "5", "6", "7"],
+      "correct": 1,
+      "explanation": "Five = cinco."
+    },
+    {
+      "id": 9,
+      "type": "translation",
+      "question": "Traduza: 'Eu sou feliz.'",
+      "options": ["I am happy.", "I am sad.", "You are happy.", "He is happy."],
+      "correct": 0,
+      "explanation": "I am happy. (verbo to be + adjetivo)"
+    },
+    {
+      "id": 10,
+      "type": "vocabulary",
+      "question": "O que significa 'apple'?",
+      "options": ["Banana", "Maçã", "Laranja", "Pera"],
+      "correct": 1,
+      "explanation": "'Apple' = maçã."
+    },
+    {
+      "id": 11,
+      "type": "grammar",
+      "question": "They ___ students.",
+      "options": ["am", "is", "are", "be"],
+      "correct": 2,
+      "explanation": "Com they usamos 'are': They are students."
+    },
+    {
+      "id": 12,
+      "type": "vocabulary",
+      "question": "Como se diz 'pai' em inglês?",
+      "options": ["Mother", "Father", "Son", "Daughter"],
+      "correct": 1,
+      "explanation": "'Father' = pai."
+    },
+    {
+      "id": 13,
+      "type": "translation",
+      "question": "Como se diz 'Obrigado' (masculino)?",
+      "options": ["Thank you", "Thanks", "You're welcome", "Please"],
+      "correct": 0,
+      "explanation": "'Thank you' ou 'Thanks' = obrigado."
+    },
+    {
+      "id": 14,
+      "type": "vocabulary",
+      "question": "Qual a cor 'blue'?",
+      "options": ["Verde", "Azul", "Vermelho", "Preto"],
+      "correct": 1,
+      "explanation": "'Blue' = azul."
+    },
+    {
+      "id": 15,
+      "type": "grammar",
+      "question": "She ___ a doctor.",
+      "options": ["am", "is", "are", "be"],
+      "correct": 1,
+      "explanation": "She is a doctor. (he/she/it + is)"
+    },
+    {
+      "id": 16,
+      "type": "vocabulary",
+      "question": "Traduza 'irmão'",
+      "options": ["Sister", "Brother", "Cousin", "Uncle"],
+      "correct": 1,
+      "explanation": "'Brother' = irmão."
+    },
+    {
+      "id": 17,
+      "type": "numbers",
+      "question": "How do you say 'dez' in English?",
+      "options": ["Nine", "Ten", "Eleven", "Twelve"],
+      "correct": 1,
+      "explanation": "Ten = dez."
+    },
+    {
+      "id": 18,
+      "type": "translation",
+      "question": "Traduza: 'Eu tenho um carro.'",
+      "options": ["I have a car.", "I am a car.", "You have a car.", "He has a car."],
+      "correct": 0,
+      "explanation": "I have a car. (verbo have)"
+    },
+    {
+      "id": 19,
+      "type": "vocabulary",
+      "question": "O que significa 'bread'?",
+      "options": ["Arroz", "Pão", "Leite", "Café"],
+      "correct": 1,
+      "explanation": "'Bread' = pão."
+    },
+    {
+      "id": 20,
+      "type": "grammar",
+      "question": "We ___ friends.",
+      "options": ["am", "is", "are", "be"],
+      "correct": 2,
+      "explanation": "We are friends. (we/you/they + are)"
+    },
+    {
+      "id": 21,
+      "type": "vocabulary",
+      "question": "Como se diz 'amarelo' em inglês?",
+      "options": ["Red", "Blue", "Yellow", "Green"],
+      "correct": 2,
+      "explanation": "'Yellow' = amarelo."
+    },
+    {
+      "id": 22,
+      "type": "translation",
+      "question": "Traduza: 'Você está bem?'",
+      "options": ["How are you?", "What is your name?", "Where are you from?", "Are you okay?"],
+      "correct": 3,
+      "explanation": "'Are you okay?' = Você está bem?"
+    },
+    {
+      "id": 23,
+      "type": "vocabulary",
+      "question": "Qual é a tradução de 'milk'?",
+      "options": ["Água", "Suco", "Leite", "Café"],
+      "correct": 2,
+      "explanation": "'Milk' = leite."
+    },
+    {
+      "id": 24,
+      "type": "grammar",
+      "question": "Complete: She ___ like coffee.",
+      "options": ["don't", "doesn't", "isn't", "aren't"],
+      "correct": 1,
+      "explanation": "She doesn't like coffee. (does not para 3ª pessoa)"
+    },
+    {
+      "id": 25,
+      "type": "vocabulary",
+      "question": "Como se diz 'segunda-feira'?",
+      "options": ["Sunday", "Monday", "Tuesday", "Friday"],
+      "correct": 1,
+      "explanation": "'Monday' = segunda-feira."
+    },
+    {
+      "id": 26,
+      "type": "translation",
+      "question": "Traduza: 'Eu gosto de pizza.'",
+      "options": ["I like pizza.", "I love pizza.", "I hate pizza.", "I want pizza."],
+      "correct": 0,
+      "explanation": "'Like' = gostar de."
+    },
+    {
+      "id": 27,
+      "type": "vocabulary",
+      "question": "O que significa 'black'?",
+      "options": ["Branco", "Preto", "Cinza", "Marrom"],
+      "correct": 1,
+      "explanation": "'Black' = preto."
+    },
+    {
+      "id": 28,
+      "type": "grammar",
+      "question": "You ___ my best friend.",
+      "options": ["am", "is", "are", "be"],
+      "correct": 2,
+      "explanation": "You are my best friend."
+    },
+    {
+      "id": 29,
+      "type": "vocabulary",
+      "question": "Como se diz 'cabeça' em inglês?",
+      "options": ["Hand", "Head", "Foot", "Eye"],
+      "correct": 1,
+      "explanation": "'Head' = cabeça."
+    },
+    {
+      "id": 30,
+      "type": "translation",
+      "question": "Traduza: 'Onde você mora?'",
+      "options": ["What is your name?", "Where do you live?", "How old are you?", "Where are you from?"],
+      "correct": 1,
+      "explanation": "'Where do you live?' = Onde você mora?"
+    }
+  ]
+}

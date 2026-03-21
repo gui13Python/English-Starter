@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Starter - Aprenda Inglês do Zero</title>
+    <meta name="description" content="Aprenda inglês básico gratuitamente. Alfabeto, pronúncia, saudações, vocabulário essencial e exercícios interativos.">
+    <meta name="google-adsense-account" content="ca-pub-7348272036985298">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7348272036985298"
+     crossorigin="anonymous"></script>
+    <style>
+        /* Reset e estilos gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #4cc9f0;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #2ecc71;
+            --warning: #f39c12;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent);
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(67, 97, 238, 0.9), rgba(58, 12, 163, 0.9));
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #3ab8d8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #3a56d4;
+        }
+        
+        .btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        /* Seções */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        /* Alfabeto */
+        .alphabet-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .alphabet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            gap: 15px;
+            margin-bottom: 2rem;
+        }
+        
+        .letter-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .letter-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(67, 97, 238, 0.3);
+        }
+        
+        .pronunciation-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1rem;
+        }
+        
+        /* Saudações */
+        .greetings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .greeting-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .greeting-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .greeting-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .phrase-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .phrase-item:last-child {
+            border-bottom: none;
+        }
+        
+        .phrase-english {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .phrase-portuguese {
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Vocabulário */
+        .vocabulary-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .category-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.2rem;
+            text-align: center;
+        }
+        
+        .category-content {
+            padding: 1.5rem;
+        }
+        
+        .vocab-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        /* Verbos */
+        .verbs-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .verb-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .verb-table th {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid #e0e0e0;
+            color: var(--secondary);
+        }
+        
+        .verb-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .verb-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        /* Exercícios com IA */
+        .exercises-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+        
+        .exercise-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .exercise-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ai-badge {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .exercise-question {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .options-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .option {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .option:hover {
+            border-color: var(--accent);
+            background-color: white;
+        }
+        
+        .option.selected {
+            border-color: var(--primary);
+            background-color: rgba(67, 97, 238, 0.1);
+        }
+        
+        .option.correct {
+            border-color: var(--success);
+            background-color: rgba(46, 204, 113, 0.1);
+        }
+        
+        .option.incorrect {
+            border-color: #e74c3c;
+            background-color: rgba(231, 76, 60, 0.1);
+        }
+        
+        .feedback {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .feedback.correct {
+            background-color: rgba(46, 204, 113, 0.1);
+            border-left: 4px solid var(--success);
+            display: block;
+        }
+        
+        .feedback.incorrect {
+            background-color: rgba(231, 76, 60, 0.1);
+            border-left: 4px solid #e74c3c;
+            display: block;
+        }
+        
+        /* IA Chat */
+        .chat-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 0.8rem 1rem;
+            border-radius: 15px;
+            line-height: 1.4;
+        }
+        
+        .message.user {
+            align-self: flex-end;
+            background-color: var(--primary);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .message.ai {
+            align-self: flex-start;
+            background-color: #f0f0f0;
+            color: var(--dark);
+            border-bottom-left-radius: 5px;
+        }
+        
+        .chat-input-container {
+            padding: 1rem;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .chat-input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .chat-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--secondary);
+                text-align: center;
+                z-index: 100;
+                padding: 1rem 0;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                padding: 0.8rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .alphabet-grid {
+                grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            }
+            
+            .letter-card {
+                height: 50px;
+                font-size: 1.3rem;
+            }
+        }
+        
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* Loader */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Estilos adicionais para o sistema de dados */
+        .data-status {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .status-dot.online {
+            background-color: var(--success);
+            animation: pulse 2s infinite;
+        }
+        
+        .status-dot.offline {
+            background-color: var(--warning);
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .admin-panel {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 999;
+            width: 250px;
+            display: none;
+        }
+        
+        .admin-panel.show {
+            display: block;
+        }
+        
+        .admin-btn {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 1000;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-icon">🇬🇧</span>
+                <span>English Starter</span>
+            </div>
+            <div class="mobile-menu">☰</div>
+            <nav>
+                <ul>
+                    <li><a href="#alphabet">Alfabeto</a></li>
+                    <li><a href="#greetings">Saudações</a></li>
+                    <li><a href="#vocabulary">Vocabulário</a></li>
+                    <li><a href="#verbs">Verbos</a></li>
+                    <li><a href="#exercises">Exercícios</a></li>
+                    <li><a href="#chat">Chat com IA</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Aprenda Inglês do Zero com Dados Locais</h1>
+            <p>Conteúdo carregado automaticamente de arquivos JSON. Alfabeto, pronúncia, saudações, vocabulário essencial, verbos e exercícios interativos.</p>
+            <a href="#alphabet" class="btn">Começar Agora</a>
+        </div>
+    </section>
+
+    <!-- Alfabeto e Pronúncia -->
+    <section id="alphabet">
+        <div class="container">
+            <div class="section-title">
+                <h2>Alfabeto e Pronúncia</h2>
+                <p>Clique em cada letra para ver a pronúncia</p>
+            </div>
+            <div class="alphabet-container">
+                <div class="alphabet-grid" id="alphabetGrid">
+                    <!-- Letras serão geradas por JavaScript -->
+                </div>
+                <div class="pronunciation-box" id="pronunciationBox">
+                    <p><strong>Dica:</strong> Clique em uma letra acima para ver sua pronúncia em português.</p>
+                    <p id="pronunciationText">Clique em uma letra para ver a pronúncia</p>
+                </div>
+                <button class="btn btn-primary" onclick="generateAlphabetWithAI()">
+                    <span id="aiAlphabetBtnText">Gerar Dica de Pronúncia</span>
+                    <div class="loader" id="alphabetLoader" style="display: none;"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Saudações e Frases Simples -->
+    <section id="greetings" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Saudações e Frases Simples</h2>
+                <p>Frases essenciais para conversação básica</p>
+            </div>
+            <div class="greetings-container">
+                <div class="greeting-card">
+                    <h3>Saudações Básicas</h3>
+                    <div id="basicGreetings">
+                        <!-- Conteúdo gerado por JavaScript -->
+                    </div>
+                </div>
+                <div class="greeting-card">
+                    <h3>Perguntas Comuns</h3>
+                    <div id="commonQuestions">
+                        <!-- Conteúdo gerado por JavaScript -->
+                    </div>
+                </div>
+                <div class="greeting-card">
+                    <h3>Expressões Úteis</h3>
+                    <div id="usefulExpressions">
+                        <!-- Conteúdo gerado por JavaScript -->
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn" onclick="generateGreetingsWithAI()">
+                    <span id="aiGreetingsBtnText">Gerar Mais Frases</span>
+                    <div class="loader" id="greetingsLoader" style="display: none;"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vocabulário Essencial -->
+    <section id="vocabulary">
+        <div class="container">
+            <div class="section-title">
+                <h2>Vocabulário Essencial</h2>
+                <p>Palavras fundamentais para comunicação básica</p>
+            </div>
+            <div class="vocabulary-container">
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Pessoas e Família</h3>
+                    </div>
+                    <div class="category-content" id="familyVocabulary">
+                        <!-- Conteúdo gerado por JavaScript -->
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Cores e Números</h3>
+                    </div>
+                    <div class="category-content" id="colorsNumbersVocabulary">
+                        <!-- Conteúdo gerado por JavaScript -->
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Comida e Bebida</h3>
+                    </div>
+                    <div class="category-content" id="foodVocabulary">
+                        <!-- Conteúdo gerado por JavaScript -->
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn" onclick="generateVocabularyWithAI()">
+                    <span id="aiVocabularyBtnText">Gerar Mais Vocabulário</span>
+                    <div class="loader" id="vocabularyLoader" style="display: none;"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verbos no Presente Simples -->
+    <section id="verbs" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Verbos no Presente Simples</h2>
+                <p>Conjugação dos verbos mais usados no dia a dia</p>
+            </div>
+            <div class="verbs-container">
+                <table class="verb-table" id="verbTable">
+                    <thead>
+                        <tr>
+                            <th>Verbo (Português)</th>
+                            <th>Verbo (Inglês)</th>
+                            <th>I (Eu)</th>
+                            <th>You (Você)</th>
+                            <th>He/She/It (Ele/Ela)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="verbTableBody">
+                        <!-- Conteúdo gerado por JavaScript -->
+                    </tbody>
+                </table>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="btn btn-primary" onclick="generateVerbsWithAI()">
+                        <span id="aiVerbsBtnText">Gerar Mais Verbos</span>
+                        <div class="loader" id="verbsLoader" style="display: none;"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exercícios Interativos com IA -->
+    <section id="exercises" class="exercises-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Exercícios Interativos</h2>
+                <p>Pratique o que aprendeu com exercícios</p>
+            </div>
+            
+            <div class="exercise-container fade-in">
+                <div class="exercise-header">
+                    <h3>Exercício de Vocabulário</h3>
+                    <span class="ai-badge">Baseado em dados locais</span>
+                </div>
+                <div class="exercise-question" id="exerciseQuestion">
+                    <!-- Pergunta gerada por JavaScript -->
+                </div>
+                <div class="options-container" id="optionsContainer">
+                    <!-- Opções geradas por JavaScript -->
+                </div>
+                <button class="btn" onclick="checkAnswer()" id="checkBtn">Verificar Resposta</button>
+                <button class="btn btn-primary" onclick="generateNewExercise()" id="newExerciseBtn">
+                    <span id="newExerciseBtnText">Novo Exercício</span>
+                    <div class="loader" id="exerciseLoader" style="display: none;"></div>
+                </button>
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat com IA para Prática -->
+    <section id="chat">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pratique Conversação</h2>
+                <p>Converse em inglês com nosso assistente</p>
+            </div>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h3>English Practice Chat</h3>
+                    <p>Faça perguntas ou pratique frases em inglês</p>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai">
+                        Olá! Eu sou seu assistente de inglês. Posso ajudá-lo a praticar conversação, corrigir frases ou explicar conceitos gramaticais. Como posso ajudá-lo hoje?
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="Digite sua mensagem em inglês ou português..." onkeypress="handleChatInputKey(event)">
+                    <button class="btn" onclick="sendChatMessage()">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>English Starter</h3>
+                    <p>Aprenda inglês do zero com conteúdo local gratuito.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="#alphabet">Alfabeto</a></li>
+                        <li><a href="#greetings">Saudações</a></li>
+                        <li><a href="#vocabulary">Vocabulário</a></li>
+                        <li><a href="#verbs">Verbos</a></li>
+                        <li><a href="#exercises">Exercícios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Tecnologia</h3>
+                    <ul>
+                        <li>JSON Local</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Sistema de Atualização Automática</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 English Starter. Sistema de dados locais com atualização automática.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão do painel admin -->
+    <button class="admin-btn" onclick="toggleAdminPanel()">⚙️</button>
+    
+    <!-- Painel de administração -->
+    <div class="admin-panel" id="adminPanel">
+        <h4 style="margin-bottom: 15px; color: var(--primary);">Painel de Dados</h4>
+        
+        <div style="margin-bottom: 15px;">
+            <button class="btn" onclick="reloadAllData()" style="width: 100%; margin-bottom: 10px;">
+                🔄 Recarregar Dados
+            </button>
+            
+            <button class="btn" onclick="checkForUpdates()" style="width: 100%; margin-bottom: 10px;">
+                🔍 Verificar Atualizações
+            </button>
+            
+            <button class="btn" onclick="exportCurrentData()" style="width: 100%; margin-bottom: 10px;">
+                📥 Exportar Dados
+            </button>
+        </div>
+        
+        <div style="border-top: 1px solid #eee; padding-top: 15px;">
+            <h5 style="margin-bottom: 10px;">Status dos Dados</h5>
+            <div id="dataStatusInfo" style="font-size: 0.8rem; color: #666;">
+                Carregando...
+            </div>
+        </div>
+    </div>
+    
+    <!-- Status dos dados -->
+    <div class="data-status" id="dataStatus">
+        <span class="status-dot online" id="statusDot"></span>
+        <span id="statusText">Carregando dados...</span>
+    </div>
+
+    <script>
+        // ============================================
+        // SISTEMA DE GERENCIAMENTO DE DADOS
+        // ============================================
+        
+        const DATA_FILES = {
+            alphabet: 'data/alphabet.json',
+            greetings: 'data/greetings.json', 
+            vocabulary: 'data/vocabulary.json',
+            verbs: 'data/verbs.json',
+            exercises: 'data/exercises.json'
+        };
+
+        // Armazenamento de dados em cache
+        let appData = {
+            alphabet: null,
+            greetings: null,
+            vocabulary: null,
+            verbs: null,
+            exercises: null
+        };
+
+        // Cache de timestamps para detectar mudanças
+        let fileTimestamps = {};
+        let autoUpdateInterval = null;
+
+        // ============================================
+        // FUNÇÕES PRINCIPAIS
+        // ============================================
+
+        // Função para carregar dados JSON
+        async function loadJSON(filePath, checkTimestamp = false) {
+            try {
+                // Se estiver verificando timestamp, adiciona parâmetro para evitar cache
+                const url = checkTimestamp ? `${filePath}?t=${Date.now()}` : filePath;
+                
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Erro ao carregar ${filePath}: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                // Armazenar timestamp atual do arquivo
+                if (checkTimestamp) {
+                    fileTimestamps[filePath] = Date.now();
+                }
+                
+                return data;
+            } catch (error) {
+                console.error('Erro ao carregar JSON:', error);
+                return null;
+            }
+        }
+
+        // Carregar todos os dados
+        async function loadAllData() {
+            showStatus('Carregando dados...', 'loading');
+            
+            const loaders = [];
+            
+            for (const [key, filePath] of Object.entries(DATA_FILES)) {
+                loaders.push(
+                    loadJSON(filePath).then(data => {
+                        if (data) {
+                            appData[key] = data;
+                            console.log(`✅ ${key} carregado`);
+                        } else {
+                            console.error(`❌ Falha ao carregar ${key}`);
+                        }
+                    })
+                );
+            }
+            
+            await Promise.all(loaders);
+            
+            // Inicializar timestamps
+            await initializeTimestamps();
+            
+            showStatus('Dados carregados', 'success');
+            updateDataStatusInfo();
+            
+            return true;
+        }
+
+        // Inicializar timestamps dos arquivos
+        async function initializeTimestamps() {
+            for (const filePath of Object.values(DATA_FILES)) {
+                try {
+                    // Tenta obter o timestamp do servidor
+                    const response = await fetch(filePath, { method: 'HEAD' });
+                    if (response.ok) {
+                        const lastModified = response.headers.get('last-modified');
+                        fileTimestamps[filePath] = lastModified ? new Date(lastModified).getTime() : Date.now();
+                    } else {
+                        fileTimestamps[filePath] = Date.now();
+                    }
+                } catch (error) {
+                    fileTimestamps[filePath] = Date.now();
+                }
+            }
+        }
+
+        // Verificar se arquivos foram modificados
+        async function checkForUpdates() {
+            showStatus('Verificando atualizações...', 'loading');
+            
+            let updatesFound = false;
+            const updatedFiles = [];
+            
+            for (const [key, filePath] of Object.entries(DATA_FILES)) {
+                try {
+                    // Faz uma requisição HEAD para verificar o timestamp
+                    const response = await fetch(filePath, { 
+                        method: 'HEAD',
+                        cache: 'no-store'
+                    });
+                    
+                    if (response.ok) {
+                        const lastModified = response.headers.get('last-modified');
+                        const currentTimestamp = lastModified ? new Date(lastModified).getTime() : Date.now();
+                        
+                        if (currentTimestamp > (fileTimestamps[filePath] || 0)) {
+                            // Arquivo foi modificado, recarregar
+                            const newData = await loadJSON(filePath, true);
+                            if (newData) {
+                                appData[key] = newData;
+                                updatedFiles.push(key);
+                                updatesFound = true;
+                                
+                                // Atualizar a interface para este tipo de dados
+                                updateInterfaceForData(key);
+                            }
+                        }
+                    }
+                } catch (error) {
+                    console.error(`Erro ao verificar ${filePath}:`, error);
+                }
+            }
+            
+            if (updatesFound) {
+                showStatus(`${updatedFiles.length} arquivo(s) atualizado(s)`, 'success');
+                showAIMessage(`Dados atualizados: ${updatedFiles.join(', ')}`);
+            } else {
+                showStatus('Nenhuma atualização encontrada', 'info');
+            }
+            
+            updateDataStatusInfo();
+            return updatesFound;
+        }
+
+        // Atualizar interface específica para tipo de dados
+        function updateInterfaceForData(dataType) {
+            switch(dataType) {
+                case 'alphabet':
+                    initAlphabet();
+                    break;
+                case 'greetings':
+                    initGreetings();
+                    break;
+                case 'vocabulary':
+                    initVocabulary();
+                    break;
+                case 'verbs':
+                    initVerbs();
+                    break;
+                case 'exercises':
+                    initExercises();
+                    break;
+            }
+        }
+
+        // Iniciar verificação automática
+        function startAutoUpdateCheck(intervalMinutes = 2) {
+            if (autoUpdateInterval) {
+                clearInterval(autoUpdateInterval);
+            }
+            
+            autoUpdateInterval = setInterval(() => {
+                checkForUpdates();
+            }, intervalMinutes * 60 * 1000);
+            
+            console.log(`✅ Verificação automática iniciada (${intervalMinutes} minutos)`);
+        }
+
+        // Parar verificação automática
+        function stopAutoUpdateCheck() {
+            if (autoUpdateInterval) {
+                clearInterval(autoUpdateInterval);
+                autoUpdateInterval = null;
+                console.log('⏹️ Verificação automática parada');
+            }
+        }
+
+        // ============================================
+        // FUNÇÕES DE INTERFACE
+        // ============================================
+
+        // Mostrar status
+        function showStatus(message, type = 'info') {
+            const statusElement = document.getElementById('statusText');
+            const dotElement = document.getElementById('statusDot');
+            
+            if (statusElement) {
+                statusElement.textContent = message;
+                
+                // Atualizar cor do ponto
+                dotElement.className = 'status-dot';
+                switch(type) {
+                    case 'success':
+                        dotElement.classList.add('online');
+                        break;
+                    case 'loading':
+                        dotElement.style.backgroundColor = 'var(--accent)';
+                        break;
+                    case 'error':
+                        dotElement.style.backgroundColor = '#e74c3c';
+                        break;
+                    default:
+                        dotElement.style.backgroundColor = 'var(--warning)';
+                }
+            }
+            
+            // Esconder status após alguns segundos (exceto para loading)
+            if (type !== 'loading') {
+                setTimeout(() => {
+                    if (statusElement) {
+                        statusElement.textContent = 'Dados sincronizados';
+                        dotElement.className = 'status-dot online';
+                    }
+                }, 3000);
+            }
+        }
+
+        // Atualizar informações do painel
+        function updateDataStatusInfo() {
+            const infoElement = document.getElementById('dataStatusInfo');
+            if (!infoElement) return;
+            
+            let html = '';
+            
+            for (const [key, data] of Object.entries(appData)) {
+                const status = data ? '✅' : '❌';
+                let count = 0;
+                
+                if (data) {
+                    if (key === 'alphabet' && data.letters) count = data.letters.length;
+                    else if (key === 'greetings') {
+                        count = (data.basic?.length || 0) + (data.questions?.length || 0) + (data.expressions?.length || 0);
+                    }
+                    else if (key === 'vocabulary' && data.categories) {
+                        count = Object.values(data.categories).reduce((sum, arr) => sum + arr.length, 0);
+                    }
+                    else if (key === 'verbs' && data.verbs) count = data.verbs.length;
+                    else if (key === 'exercises' && data.exercises) count = data.exercises.length;
+                }
+                
+                const lastModified = data && data.lastModified 
+                    ? new Date(data.lastModified).toLocaleTimeString('pt-BR')
+                    : 'N/A';
+                
+                html += `<div style="margin-bottom: 5px;">
+                    ${status} <strong>${key}:</strong> ${count} itens
+                    <br><small>Última mod: ${lastModified}</small>
+                </div>`;
+            }
+            
+            infoElement.innerHTML = html;
+        }
+
+        // Recarregar todos os dados
+        async function reloadAllData() {
+            showStatus('Recarregando todos os dados...', 'loading');
+            await loadAllData();
+            
+            // Reinicializar todas as seções
+            initAlphabet();
+            initGreetings();
+            initVocabulary();
+            initVerbs();
+            initExercises();
+            
+            showStatus('Dados recarregados com sucesso!', 'success');
+            showAIMessage('Todos os dados foram recarregados');
+        }
+
+        // Exportar dados atuais
+        function exportCurrentData() {
+            const dataStr = JSON.stringify(appData, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = `english-data-${new Date().toISOString().slice(0,10)}.json`;
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+            
+            showStatus('Dados exportados', 'success');
+        }
+
+        // Alternar painel admin
+        function toggleAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            panel.classList.toggle('show');
+        }
+
+        // ============================================
+        // INICIALIZAÇÃO DO SISTEMA
+        // ============================================
+
+        // Inicialização principal
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Carregar dados primeiro
+            await loadAllData();
+            
+            // Inicializar componentes
+            initAlphabet();
+            initGreetings();
+            initVocabulary();
+            initVerbs();
+            initExercises();
+            
+            // Iniciar verificação automática
+            startAutoUpdateCheck(2); // Verificar a cada 2 minutos
+            
+            // Configurar menu mobile
+            document.querySelector('.mobile-menu').addEventListener('click', function() {
+                document.querySelector('nav ul').classList.toggle('show');
+            });
+            
+            // Configurar smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Fechar menu ao clicar em links
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.addEventListener('click', function() {
+                    document.querySelector('nav ul').classList.remove('show');
+                });
+            });
+            
+            console.log('✅ Sistema inicializado com sucesso!');
+        });
+
+        // ============================================
+        // FUNÇÕES DE CARREGAMENTO DE DADOS
+        // ============================================
+
+        // Alfabeto
+        function initAlphabet() {
+            if (!appData.alphabet || !appData.alphabet.letters) {
+                console.error('Dados do alfabeto não disponíveis');
+                return;
+            }
+
+            const alphabetGrid = document.getElementById('alphabetGrid');
+            if (!alphabetGrid) return;
+            
+            alphabetGrid.innerHTML = '';
+            
+            appData.alphabet.letters.forEach(letterData => {
+                const letterCard = document.createElement('div');
+                letterCard.className = 'letter-card';
+                letterCard.textContent = letterData.letter;
+                letterCard.addEventListener('click', () => {
+                    showPronunciation(letterData.letter, letterData.pronunciation);
+                });
+                alphabetGrid.appendChild(letterCard);
+            });
+            
+            // Mostrar primeira letra
+            if (appData.alphabet.letters.length > 0) {
+                showPronunciation(
+                    appData.alphabet.letters[0].letter,
+                    appData.alphabet.letters[0].pronunciation
+                );
+            }
+        }
+
+        function showPronunciation(letter, pronunciation) {
+            const pronunciationText = document.getElementById('pronunciationText');
+            if (pronunciationText) {
+                pronunciationText.textContent = `${letter} = "${pronunciation}"`;
+            }
+            
+            // Efeito visual
+            document.querySelectorAll('.letter-card').forEach(card => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = 'none';
+            });
+            
+            const selectedCard = Array.from(document.querySelectorAll('.letter-card'))
+                .find(card => card.textContent === letter);
+            if (selectedCard) {
+                selectedCard.style.transform = 'translateY(-5px)';
+                selectedCard.style.boxShadow = '0 8px 15px rgba(67, 97, 238, 0.3)';
+            }
+        }
+
+        function generateAlphabetWithAI() {
+            if (!appData.alphabet || !appData.alphabet.tips) {
+                console.error('Dicas não disponíveis');
+                return;
+            }
+
+            const btn = document.querySelector('#aiAlphabetBtnText');
+            const loader = document.getElementById('alphabetLoader');
+            
+            if (btn) btn.style.display = 'none';
+            if (loader) loader.style.display = 'block';
+            
+            setTimeout(() => {
+                if (appData.alphabet.tips.length > 0) {
+                    const randomTip = appData.alphabet.tips[
+                        Math.floor(Math.random() * appData.alphabet.tips.length)
+                    ];
+                    
+                    const pronunciationBox = document.getElementById('pronunciationBox');
+                    if (pronunciationBox) {
+                        const newTip = document.createElement('p');
+                        newTip.className = 'fade-in';
+                        newTip.textContent = randomTip;
+                        newTip.style.marginTop = '10px';
+                        newTip.style.fontStyle = 'italic';
+                        newTip.style.color = '#4361ee';
+                        
+                        pronunciationBox.appendChild(newTip);
+                        pronunciationBox.classList.add('fade-in');
+                        setTimeout(() => pronunciationBox.classList.remove('fade-in'), 500);
+                    }
+                }
+                
+                if (btn) btn.style.display = 'inline';
+                if (loader) loader.style.display = 'none';
+            }, 1000);
+        }
+
+        // Saudações
+        function initGreetings() {
+            if (!appData.greetings) return;
+
+            if (appData.greetings.basic) {
+                populateGreetings('basicGreetings', appData.greetings.basic);
+            }
+            if (appData.greetings.questions) {
+                populateGreetings('commonQuestions', appData.greetings.questions);
+            }
+            if (appData.greetings.expressions) {
+                populateGreetings('usefulExpressions', appData.greetings.expressions);
+            }
+        }
+
+        function populateGreetings(elementId, greetings) {
+            const container = document.getElementById(elementId);
+            if (!container) return;
+            
+            container.innerHTML = '';
+            
+            greetings.forEach(greeting => {
+                const phraseItem = document.createElement('div');
+                phraseItem.className = 'phrase-item';
+                phraseItem.innerHTML = `
+                    <span class="phrase-english">${greeting.en}</span>
+                    <span class="phrase-portuguese">${greeting.pt}</span>
+                `;
+                container.appendChild(phraseItem);
+            });
+        }
+
+        function generateGreetingsWithAI() {
+            const btn = document.querySelector('#aiGreetingsBtnText');
+            const loader = document.getElementById('greetingsLoader');
+            
+            if (btn) btn.style.display = 'none';
+            if (loader) loader.style.display = 'block';
+            
+            setTimeout(() => {
+                // Exemplo de frases extras
+                const extraGreetings = [
+                    {"en": "Nice to meet you", "pt": "Prazer em conhecê-lo(a)"},
+                    {"en": "Have a nice day", "pt": "Tenha um bom dia"},
+                    {"en": "What time is it?", "pt": "Que horas são?"}
+                ];
+                
+                extraGreetings.forEach(greeting => {
+                    const randomCategory = ['basicGreetings', 'commonQuestions', 'usefulExpressions'][
+                        Math.floor(Math.random() * 3)
+                    ];
+                    
+                    const container = document.getElementById(randomCategory);
+                    if (container) {
+                        const phraseItem = document.createElement('div');
+                        phraseItem.className = 'phrase-item fade-in';
+                        phraseItem.innerHTML = `
+                            <span class="phrase-english">${greeting.en}</span>
+                            <span class="phrase-portuguese">${greeting.pt}</span>
+                        `;
+                        container.appendChild(phraseItem);
+                    }
+                });
+                
+                if (btn) btn.style.display = 'inline';
+                if (loader) loader.style.display = 'none';
+                showAIMessage("Novas frases adicionadas!");
+            }, 1500);
+        }
+
+        // Vocabulário
+        function initVocabulary() {
+            if (!appData.vocabulary || !appData.vocabulary.categories) return;
+
+            // Família
+            if (appData.vocabulary.categories.family) {
+                populateVocabulary('familyVocabulary', appData.vocabulary.categories.family);
+            }
+            
+            // Cores e números
+            if (appData.vocabulary.categories.colors && appData.vocabulary.categories.numbers) {
+                const colorsNumbers = [
+                    ...appData.vocabulary.categories.colors,
+                    ...appData.vocabulary.categories.numbers
+                ];
+                populateVocabulary('colorsNumbersVocabulary', colorsNumbers);
+            }
+            
+            // Comida
+            if (appData.vocabulary.categories.food) {
+                populateVocabulary('foodVocabulary', appData.vocabulary.categories.food);
+            }
+        }
+
+        function populateVocabulary(elementId, vocabulary) {
+            const container = document.getElementById(elementId);
+            if (!container) return;
+            
+            container.innerHTML = '';
+            
+            vocabulary.forEach(item => {
+                const vocabItem = document.createElement('div');
+                vocabItem.className = 'vocab-item';
+                vocabItem.innerHTML = `
+                    <span class="phrase-english">${item.en}</span>
+                    <span class="phrase-portuguese">${item.pt}</span>
+                `;
+                container.appendChild(vocabItem);
+            });
+        }
+
+        function generateVocabularyWithAI() {
+            const btn = document.querySelector('#aiVocabularyBtnText');
+            const loader = document.getElementById('vocabularyLoader');
+            
+            if (btn) btn.style.display = 'none';
+            if (loader) loader.style.display = 'block';
+            
+            setTimeout(() => {
+                // Exemplo de palavras extras
+                const newWords = [
+                    { en: "grandmother", pt: "avó" },
+                    { en: "grandfather", pt: "avô" },
+                    { en: "juice", pt: "suco" },
+                    { en: "egg", pt: "ovo" }
+                ];
+                
+                newWords.forEach(word => {
+                    const randomContainer = document.getElementById('foodVocabulary');
+                    if (randomContainer) {
+                        const vocabItem = document.createElement('div');
+                        vocabItem.className = 'vocab-item fade-in';
+                        vocabItem.innerHTML = `
+                            <span class="phrase-english">${word.en}</span>
+                            <span class="phrase-portuguese">${word.pt}</span>
+                        `;
+                        randomContainer.appendChild(vocabItem);
+                    }
+                });
+                
+                if (btn) btn.style.display = 'inline';
+                if (loader) loader.style.display = 'none';
+                showAIMessage("Novo vocabulário adicionado!");
+            }, 1500);
+        }
+
+        // Verbos
+        function initVerbs() {
+            if (!appData.verbs || !appData.verbs.verbs) return;
+
+            const tableBody = document.getElementById('verbTableBody');
+            if (!tableBody) return;
+            
+            tableBody.innerHTML = '';
+            
+            appData.verbs.verbs.forEach(verb => {
+                const row = document.createElement('tr');
+                row.className = 'fade-in';
+                row.innerHTML = `
+                    <td>${verb.pt}</td>
+                    <td><strong>${verb.en}</strong></td>
+                    <td>${verb.i}</td>
+                    <td>${verb.you}</td>
+                    <td>${verb.heSheIt}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        function generateVerbsWithAI() {
+            const btn = document.querySelector('#aiVerbsBtnText');
+            const loader = document.getElementById('verbsLoader');
+            
+            if (btn) btn.style.display = 'none';
+            if (loader) loader.style.display = 'block';
+            
+            setTimeout(() => {
+                // Exemplo de verbos extras
+                const newVerbs = [
+                    { pt: "comer", en: "eat", i: "eat", you: "eat", heSheIt: "eats" },
+                    { pt: "beber", en: "drink", i: "drink", you: "drink", heSheIt: "drinks" }
+                ];
+                
+                const tableBody = document.getElementById('verbTableBody');
+                if (tableBody) {
+                    newVerbs.forEach(verb => {
+                        const row = document.createElement('tr');
+                        row.className = 'fade-in';
+                        row.innerHTML = `
+                            <td>${verb.pt}</td>
+                            <td><strong>${verb.en}</strong></td>
+                            <td>${verb.i}</td>
+                            <td>${verb.you}</td>
+                            <td>${verb.heSheIt}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                }
+                
+                if (btn) btn.style.display = 'inline';
+                if (loader) loader.style.display = 'none';
+                showAIMessage("Novos verbos adicionados!");
+            }, 1500);
+        }
+
+        // Exercícios
+        let currentExercise = null;
+        let selectedOption = null;
+
+        function initExercises() {
+            if (!appData.exercises || !appData.exercises.exercises) return;
+            
+            // Se houver exercícios, usar o primeiro
+            if (appData.exercises.exercises.length > 0) {
+                loadExercise(appData.exercises.exercises[0]);
+            }
+        }
+
+        function loadExercise(exercise) {
+            currentExercise = exercise;
+            
+            const questionElement = document.getElementById('exerciseQuestion');
+            const optionsContainer = document.getElementById('optionsContainer');
+            
+            if (questionElement) {
+                questionElement.textContent = exercise.question;
+            }
+            
+            if (optionsContainer) {
+                optionsContainer.innerHTML = '';
+                
+                exercise.options.forEach((option, index) => {
+                    const optionElement = document.createElement('div');
+                    optionElement.className = 'option';
+                    optionElement.textContent = option;
+                    optionElement.dataset.index = index;
+                    optionElement.addEventListener('click', () => selectOption(optionElement));
+                    optionsContainer.appendChild(optionElement);
+                });
+            }
+            
+            // Resetar seleção
+            selectedOption = null;
+            const feedback = document.getElementById('feedback');
+            if (feedback) {
+                feedback.className = 'feedback';
+                feedback.textContent = '';
+            }
+            
+            const checkBtn = document.getElementById('checkBtn');
+            if (checkBtn) {
+                checkBtn.disabled = false;
+            }
+        }
+
+        function generateNewExercise() {
+            const btn = document.querySelector('#newExerciseBtnText');
+            const loader = document.getElementById('exerciseLoader');
+            
+            if (btn) btn.style.display = 'none';
+            if (loader) loader.style.display = 'block';
+            
+            setTimeout(() => {
+                if (appData.exercises && appData.exercises.exercises) {
+                    // Selecionar exercício aleatório
+                    const randomIndex = Math.floor(Math.random() * appData.exercises.exercises.length);
+                    loadExercise(appData.exercises.exercises[randomIndex]);
+                }
+                
+                if (btn) btn.style.display = 'inline';
+                if (loader) loader.style.display = 'none';
+                
+                // Animação
+                const container = document.querySelector('.exercise-container');
+                if (container) {
+                    container.classList.add('fade-in');
+                    setTimeout(() => container.classList.remove('fade-in'), 500);
+                }
+            }, 1500);
+        }
+
+        function selectOption(optionElement) {
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            optionElement.classList.add('selected');
+            selectedOption = parseInt(optionElement.dataset.index);
+        }
+
+        function checkAnswer() {
+            if (selectedOption === null) {
+                alert("Por favor, selecione uma opção antes de verificar.");
+                return;
+            }
+            
+            const feedback = document.getElementById('feedback');
+            const checkBtn = document.getElementById('checkBtn');
+            
+            if (checkBtn) checkBtn.disabled = true;
+            
+            document.querySelectorAll('.option').forEach((opt, index) => {
+                if (index === currentExercise.correct) {
+                    opt.classList.add('correct');
+                } else if (index === selectedOption && index !== currentExercise.correct) {
+                    opt.classList.add('incorrect');
+                }
+            });
+            
+            if (feedback) {
+                if (selectedOption === currentExercise.correct) {
+                    feedback.textContent = "Correto! Parabéns, você acertou!";
+                    feedback.className = 'feedback correct';
+                } else {
+                    feedback.textContent = `Incorreto. A resposta correta é: "${currentExercise.options[currentExercise.correct]}"`;
+                    if (currentExercise.explanation) {
+                        feedback.textContent += `\n${currentExercise.explanation}`;
+                    }
+                    feedback.className = 'feedback incorrect';
+                }
+            }
+        }
+
+        // Chat
+                // Chat
+        function handleChatInputKey(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+        
+        function sendChatMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (message === '') return;
+            
+            // Adicionar mensagem do usuário
+            addChatMessage(message, 'user');
+            input.value = '';
+            
+            // Simular resposta
+            setTimeout(() => {
+                const responses = [
+                    "Ótima pergunta! Vamos praticar mais?",
+                    "Interessante! Você gostaria de aprender mais sobre isso?",
+                    "Boa pergunta! Continue praticando.",
+                    "Excelente! Você está no caminho certo.",
+                    "Vamos praticar mais algumas frases?"
+                ];
+                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                addChatMessage(randomResponse, 'ai');
+            }, 1000);
+        }
+        
+        function addChatMessage(text, sender) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageElement = document.createElement('div');
+            messageElement.className = `message ${sender}`;
+            messageElement.textContent = text;
+            chatMessages.appendChild(messageElement);
+            
+            // Rolagem automática para a última mensagem
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Função de mensagem
+        function showAIMessage(message) {
+            const notification = document.createElement('div');
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.backgroundColor = '#4361ee';
+            notification.style.color = 'white';
+            notification.style.padding = '15px 20px';
+            notification.style.borderRadius = '8px';
+            notification.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            notification.style.zIndex = '1000';
+            notification.style.maxWidth = '300px';
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transition = 'opacity 0.5s';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 500);
+            }, 3000);
+        }
+
+        // ============================================
+        // EVENT LISTENERS ADICIONAIS
+        // ============================================
+
+        // Fechar painel admin ao clicar fora
+        document.addEventListener('click', function(event) {
+            const adminPanel = document.getElementById('adminPanel');
+            const adminBtn = document.querySelector('.admin-btn');
+            
+            if (adminPanel && adminPanel.classList.contains('show') && 
+                !adminPanel.contains(event.target) && 
+                !adminBtn.contains(event.target)) {
+                adminPanel.classList.remove('show');
+            }
+        });
+
+        // Detectar quando a página perde/ganha foco
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                // Página voltou a ter foco, verificar atualizações
+                checkForUpdates();
+            }
+        });
+
+        console.log('📁 Sistema de dados locais carregado!');
+    </script>
+</body>
+</html>
